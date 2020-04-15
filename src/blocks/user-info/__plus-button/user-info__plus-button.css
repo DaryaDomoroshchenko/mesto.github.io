@@ -1,0 +1,25 @@
+.user-info__plus-button {
+  width: 150px;
+  height: 50px;
+  font-size: 30px;
+  position: absolute;
+  top: 16px;
+  right: 0;
+}
+
+.user-info__plus-button:hover {
+    color: #000;
+    background-color: #FFF;
+}
+
+.user-info__plus-button:active {
+  color: #FFF;
+  background-color: #000;
+}
+
+@media screen and (max-width: 985px) {
+  .user-info__plus-button {
+    position: static;
+    margin-bottom: 40px;
+  }
+}

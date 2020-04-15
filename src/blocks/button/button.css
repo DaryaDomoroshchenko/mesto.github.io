@@ -1,0 +1,14 @@
+@import url(./_disabled/button_disabled.css);
+
+.button {
+  background-color: #000;
+  border: 1px solid white;
+  color: white;
+  display: block;
+  cursor: pointer;
+}
+
+.button:focus {
+  outline-color: greenyellow;
+
+}
