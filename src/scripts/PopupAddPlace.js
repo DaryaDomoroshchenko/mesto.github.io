@@ -1,5 +1,7 @@
+import Popup from "./Popup.js";
+
 // Класс попапа добавления карточки
-class PopupAddPlace extends Popup {
+export default class PopupAddPlace extends Popup {
 
     constructor(elem, createCard, container, validateForm, api) {
         super(elem);

@@ -1,5 +1,5 @@
 // Класс, создающий карточку
-class Card {
+export default class Card {
 
     // Создает инстанс карточки
     constructor(placeName, link, likes) {

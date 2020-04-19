@@ -1,5 +1,5 @@
 // Класс для хранения и отрисовки карточек
-class CardList {
+export default class CardList {
 
     constructor(container, createCard, userInfo, api) {
         this.container = container;
@@ -22,7 +22,7 @@ class CardList {
                 return Promise.reject(`Ошибка: ${res.status}`);
             })
             .then((result) => {
-                console.log(result);
+                //console.log(result);
                 this.container.innerHTML = '';
                 for (let i = 0; i < result.length; i++) {
                     
@@ -169,7 +169,7 @@ class CardList {
 
     // Отображает лайк при загрузке, если карточка была лайкнута ранее
     likedOrNot(likes, card) {
-        console.log("likedOrNot");
+        //console.log("likedOrNot");
         let myId = this.userInfo.getMyId();
         for (let i = 0; i < likes.length; i++) {
             if (likes[i]._id === myId) {

@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mesto</title>
-  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
 </head>
 
 <body>
   <div class="root">
 
     <header class="header root__section">
-      <img src="./images/logo.svg" alt="mesto logo" class="logo">
+      <img src="<%=require('./images/logo.svg').default%>" alt="mesto logo" class="logo">
     </header>
 
     <div class="profile root__section">
@@ -48,7 +48,7 @@
 
     <div class="popup popup__addPlace">
       <div class="popup__content">
-        <img src="./images/close.svg" alt="Закрыть" class="popup__close">
+        <img src="<%=require('./images/close.svg').default%>" alt="Закрыть" class="popup__close">
         <h4 class="popup__title">Новое место</h4>
         <form id="formAdd" class="popup__form" name="add">
             <input id="input-placeName" type="text" required minlength="2" maxlength="30" name="placeName" class="popup__input popup__input_type_placeName" placeholder="Название">
@@ -62,7 +62,7 @@
 
     <div class="popup popup__edit">
       <div class="popup__content">
-        <img src="./images/close.svg" alt="Закрыть" class="popup__close">
+        <img src="<%=require('./images/close.svg').default%>" alt="Закрыть" class="popup__close">
         <h4 class="popup__title">Редактировать профиль</h4>
         <form id="formEdit" class="popup__form" name="edit">
             <input id="input-profileName" type="text" required minlength="2" maxlength="30" name="profileName" class="popup__input popup__input_type_profileName" placeholder="Имя" value="">
@@ -76,7 +76,7 @@
 
     <div class="popup popup__changeAvatar">
       <div class="popup__content">
-        <img src="./images/close.svg" alt="Закрыть" class="popup__close">
+        <img src="<%=require('./images/close.svg').default%>" alt="Закрыть" class="popup__close">
         <h4 class="popup__title">Обновить аватар</h4>
         <form id="formchangeAvatar" class="popup__form" name="changeAvatar">
           <input id="input-avatarLink" type="url" required name="avatarLink" class="popup__input popup__input_type_avatar-link" placeholder="Ссылка на аватар">
@@ -88,13 +88,13 @@
 
     <div class="popup popup__image">
       <div class="popup__image-content">
-        <img src="./images/close.svg" alt="Закрыть" class="popup__close">
+        <img src="<%=require('./images/close.svg').default%>" alt="Закрыть" class="popup__close">
         <img alt="Фотография выбранного места" class="popup__big-image">
       </div>
     </div>
 
   </div>
-  <script src="./scripts/initialCards.js"></script>
+  <!--script src="./scripts/initialCards.js"></script-->
   <script src="./scripts/Card.js"></script>
   <script src="./scripts/CardList.js"></script>
   <script src="./scripts/UserInfo.js"></script>
@@ -105,6 +105,6 @@
   <script src="./scripts/PopupImage.js"></script>
   <script src="./scripts/FormValidator.js"></script>
   <script src="./scripts/Api.js"></script>
-  <script src="./index.js"></script>
+  <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 </body>
 </html>
