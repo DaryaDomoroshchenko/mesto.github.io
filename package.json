@@ -1,7 +1,7 @@
 {
-  "name": "mesto.github.io",
-  "homepage": "https://github.com/DaryaDomoroshchenko/mesto.github.io",
-  "version": "0.0.1",
+  "name": "mesto_service",
+  "homepage": "https://github.com/DaryaDomoroshchenko/mesto_service",
+  "version": "0.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -11,12 +11,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DaryaDomoroshchenko/mesto.github.io.git"
+    "url": "git+https://github.com/DaryaDomoroshchenko/mesto_service.git"
   },
   "author": "DaryaDomoroshchenko\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D Domoroshchenko",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/DaryaDomoroshchenko/mesto.github.io/issues"
+    "url": "https://github.com/DaryaDomoroshchenko/mesto_service/issues"
   },
 
   "devDependencies": {
