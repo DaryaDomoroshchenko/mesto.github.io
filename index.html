@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mesto</title>
+  <link rel="stylesheet" href="index.0bfdd49fbc3abd788dfb.css">
+</head>
+
+<body>
+  <div class="root">
+
+    <header class="header root__section">
+      <img src="./images/logo.svg" alt="mesto logo" class="logo">
+    </header>
+
+    <div class="profile root__section">
+      <div class="user-info">
+        <div class="user-info__photo"></div>
+        <div class="user-info__data">
+          <h1 class="user-info__name"></h1>
+          <p class="user-info__job"></p>
+          <button class="button user-info__edit-button">Edit</button>
+        </div>
+        <button class="button user-info__plus-button">+</button>
+      </div>
+    </div>
+
+    <div class="places-list root__section">
+      <!-- Пример вёрстки карточки: 
+
+      <div class="place-card">
+        <div class="place-card__image" style="background-image: url(https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg)">
+          <button class="place-card__delete-icon"></button>
+        </div>
+        <div class="place-card__description">
+          <h3 class="place-card__name">Камчатка</h3>
+          <div class="place-card__likes-container">
+            <button class="place-card__like-icon"></button>
+            <p class="place-card__likes-number"></p>
+          </div>
+        </div>
+      </div>
+
+      конец примера. -->
+    </div>
+
+    <div class="popup popup__addPlace">
+      <div class="popup__content">
+        <img src="./images/close.svg" alt="Закрыть" class="popup__close">
+        <h4 class="popup__title">Новое место</h4>
+        <form id="formAdd" class="popup__form" name="add">
+            <input id="input-placeName" type="text" required minlength="2" maxlength="30" name="placeName" class="popup__input popup__input_type_placeName" placeholder="Название">
+            <span id="error-placeName" class="error-message"></span>
+            <input id="input-link" type="url" required name="link" class="popup__input popup__input_type_link-url" placeholder="Ссылка на картинку">
+            <span id="error-link" class="error-message"></span>
+            <button type="submit" class="button button_disabled popup__button popup__button_add">+</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="popup popup__edit">
+      <div class="popup__content">
+        <img src="./images/close.svg" alt="Закрыть" class="popup__close">
+        <h4 class="popup__title">Редактировать профиль</h4>
+        <form id="formEdit" class="popup__form" name="edit">
+            <input id="input-profileName" type="text" required minlength="2" maxlength="30" name="profileName" class="popup__input popup__input_type_profileName" placeholder="Имя" value="">
+            <span id="error-profileName" class="error-message"></span>
+            <input id="input-job" type="text" required minlength="2" maxlength="30" name="job" class="popup__input popup__input_type_about" placeholder="О себе" value="">
+            <span id="error-job" class="error-message"></span>
+            <button type="submit" class="button popup__button popup__button_edit">Сохранить</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="popup popup__changeAvatar">
+      <div class="popup__content">
+        <img src="./images/close.svg" alt="Закрыть" class="popup__close">
+        <h4 class="popup__title">Обновить аватар</h4>
+        <form id="formchangeAvatar" class="popup__form" name="changeAvatar">
+          <input id="input-avatarLink" type="url" required name="avatarLink" class="popup__input popup__input_type_avatar-link" placeholder="Ссылка на аватар">
+          <span id="error-avatarLink" class="error-message"></span>
+          <button type="submit" class="button button_disabled popup__button popup__button_edit">Сохранить</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="popup popup__image">
+      <div class="popup__image-content">
+        <img src="./images/close.svg" alt="Закрыть" class="popup__close">
+        <img alt="Фотография выбранного места" class="popup__big-image">
+      </div>
+    </div>
+
+  </div>
+  <!--script src="./scripts/initialCards.js"></script-->
+  <script src="./scripts/Card.js"></script>
+  <script src="./scripts/CardList.js"></script>
+  <script src="./scripts/UserInfo.js"></script>
+  <script src="./scripts/Popup.js"></script>
+  <script src="./scripts/PopupEdit.js"></script>
+  <script src="./scripts/PopupAddPlace.js"></script>
+  <script src="./scripts/PopupChangeAvatar.js"></script>
+  <script src="./scripts/PopupImage.js"></script>
+  <script src="./scripts/FormValidator.js"></script>
+  <script src="./scripts/Api.js"></script>
+  <script src="main.e28e95d172d432665fb7.js"></script>
+</body>
+</html>
