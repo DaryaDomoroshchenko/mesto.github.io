@@ -1,8 +1,8 @@
 {
   "name": "mesto_service",
-  "homepage": "https://github.com/DaryaDomoroshchenko/mesto_service",
+  "description": "Сервис Mesto",
+  "homepage": "https://daryadomoroshchenko.github.io/mesto_service/",
   "version": "0.0.3",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production rimraf dist && webpack --mode production",
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/DaryaDomoroshchenko/mesto_service.git"
   },
-  "author": "DaryaDomoroshchenko\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D Domoroshchenko",
+  "author": "Darya Domoroshchenko",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/DaryaDomoroshchenko/mesto_service/issues"

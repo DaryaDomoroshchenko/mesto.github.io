@@ -1,6 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash'); 
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
@@ -19,7 +19,7 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
+          loader: 'babel-loader'
         }
       },
       {
@@ -35,7 +35,7 @@ module.exports = {
         loader: 'file-loader?name=./vendor/[name].[ext]'
       },
       {
-        test: /\.(gif|png|jpe?g|svg)$/i,
+        test: /\.(gif|png|jpe?g|svg|ico)$/i,
         use: [
           'file-loader?name=./images/[name].[ext]',
           {
@@ -65,8 +65,7 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      inject: false,
-      //hash: true,    
+      inject: false, 
       template: './src/index.html',
       filename: 'index.html'
     }),
@@ -74,7 +73,7 @@ module.exports = {
     new WebpackMd5Hash(),
 
     new webpack.DefinePlugin({
-      'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+      serverUrl: JSON.stringify(isDev ? 'http://praktikum.tk': 'https://praktikum.tk')
     })
   ]
 };

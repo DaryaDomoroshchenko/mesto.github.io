@@ -27,7 +27,6 @@ export default class PopupChangeAvatar extends Popup {
                 return Promise.reject(`Ошибка: ${res.status}`);
             })
             .then((result) => {
-                console.log(result);
                 let avatar = result.avatar;
                 this.avatarPhoto.style.backgroundImage = "url('" + avatar + "')";
             

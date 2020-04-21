@@ -2,7 +2,6 @@ import "./index.css";
 import Card from "./scripts/Card.js";
 import CardList from "./scripts/CardList.js";
 import UserInfo from "./scripts/UserInfo.js";
-//import Popup from "./scripts/Popup.js";
 import PopupEdit from "./scripts/PopupEdit.js";
 import PopupAddPlace from "./scripts/PopupAddPlace.js";
 import PopupChangeAvatar from "./scripts/PopupChangeAvatar.js";
@@ -22,9 +21,11 @@ const formAddValidate = new FormValidator(document.querySelector('#formAdd'));
 const formEditValidate = new FormValidator(document.querySelector('#formEdit'));
 const formChangeAvatarValidate = new FormValidator(document.querySelector('#formchangeAvatar'));
 
+const praktikumUrl = `${serverUrl}`;
+
 /* Подключение сайта к серверу */
 const api = new Api({
-    baseUrl: 'https://praktikum.tk/cohort9',
+    baseUrl: `${praktikumUrl}/cohort9`,
     headers: {
       authorization: '59aa6e9d-8ab0-4424-8b7f-633e85efdefb',
       'Content-Type': 'application/json'

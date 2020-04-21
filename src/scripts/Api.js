@@ -61,9 +61,6 @@ export default class Api {
     }
 
     deleteCard(cardId) {
-        console.log('deleteCard API');
-        console.log(`${this.baseUrl}/cards/${cardId}`);
-        
         return fetch(`${this.baseUrl}/cards/${cardId}`, {
             method: 'DELETE',
             headers: this.headers
@@ -71,9 +68,6 @@ export default class Api {
     }
 
     likeCard(cardId) {
-        console.log('likeCard API');
-        console.log(`${this.baseUrl}/cards/like/${cardId}`);
-
         return fetch(`${this.baseUrl}/cards/like/${cardId}`, {
             method: 'PUT',
             headers: this.headers
@@ -81,9 +75,6 @@ export default class Api {
     }
 
     removeLike(cardId) {
-        console.log('removeLike API');
-        console.log(`${this.baseUrl}/cards/like/${cardId}`);
-
         return fetch(`${this.baseUrl}/cards/like/${cardId}`, {
             method: 'DELETE',
             headers: this.headers

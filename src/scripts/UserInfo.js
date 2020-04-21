@@ -27,7 +27,6 @@ export default class UserInfo {
                 return Promise.reject(`Ошибка: ${res.status}`);
             })
             .then((result) => {
-                //console.log(result);
                 this.myId = result._id;
                 const name = result.name;
                 const job = result.about;
@@ -39,10 +38,6 @@ export default class UserInfo {
 
                 this.setUserInfo({name, job});
 
-                //let myId = result._id;
-                //this.setMyId(myId);
-                //console.log(this.myId);
-
                 return result;
             })
             .then((result) => {
@@ -53,12 +48,6 @@ export default class UserInfo {
                 console.log(err);
             });
     }
-
-    // Обновляет id пользователя внутри экземпляра класса
-    /*setMyId(myId) {
-        this.myId = myId;
-        console.log(this.myId);
-    }*/
 
     // Возвращает id пользователя
     getMyId() {

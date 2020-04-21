@@ -29,8 +29,6 @@ export default class PopupAddPlace extends Popup {
                 return Promise.reject(`Ошибка: ${res.status}`);
             })
             .then((result) => {
-                console.log(result);
-
                 let placeName = result.name;
                 let link = result.link;
                 let likes = result.likes;

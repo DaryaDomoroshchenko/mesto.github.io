@@ -23,7 +23,6 @@ export default class PopupEdit extends Popup {
 
     // Отображает актуальные данные при открытии формы
     showCurrentUserInfo() {
-        //console.log("showCurrentUserInfo");
         const name = this.userInfo.getProfileName();
         const job = this.userInfo.getProfileJob();
         this.inputName.value = name;
@@ -40,14 +39,12 @@ export default class PopupEdit extends Popup {
                 return Promise.reject(`Ошибка: ${res.status}`);
             })
             .then((result) => {
-                //console.log(result);
                 this.profileName.textContent = result.name;
                 this.profileJob.textContent = result.about;
                 
                 return result;
             })
             .then((result) => {
-                //console.log("setUserInfo");
                 const name = result.name;
                 const job = result.about;
                 this.userInfo.setUserInfo({name, job});
