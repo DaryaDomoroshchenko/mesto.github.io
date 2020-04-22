@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/DaryaDomoroshchenko/mesto_service/issues"
   },
-
+  "browserslist": ["last 10 versions"],
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.0",
@@ -41,7 +41,6 @@
     "webpack-dev-server": "^3.10.3",
     "webpack-md5-hash": "0.0.6"
   },
-  
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "core-js": "^3.4.1"
