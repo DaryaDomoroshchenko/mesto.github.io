@@ -18,7 +18,6 @@
   "bugs": {
     "url": "https://github.com/DaryaDomoroshchenko/mesto_service/issues"
   },
-  "browserslist": ["last 10 versions"],
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.0",
