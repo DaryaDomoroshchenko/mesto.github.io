@@ -1,5 +1,7 @@
+import Popup from "./Popup.js";
+
 // Класс попапа увеличенной картинки
-class PopupImage extends Popup {
+export default class PopupImage extends Popup {
 
     constructor(elem) {
         super(elem);

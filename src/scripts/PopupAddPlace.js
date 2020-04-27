@@ -1,5 +1,7 @@
+import Popup from "./Popup.js";
+
 // Класс попапа добавления карточки
-class PopupAddPlace extends Popup {
+export default class PopupAddPlace extends Popup {
 
     constructor(elem, createCard, container, validateForm, api) {
         super(elem);
@@ -27,8 +29,6 @@ class PopupAddPlace extends Popup {
                 return Promise.reject(`Ошибка: ${res.status}`);
             })
             .then((result) => {
-                console.log(result);
-
                 let placeName = result.name;
                 let link = result.link;
                 let likes = result.likes;

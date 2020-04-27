@@ -1,5 +1,5 @@
 // Класс, создающий карточку
-class Card {
+export default class Card {
 
     // Создает инстанс карточки
     constructor(placeName, link, likes) {
@@ -38,34 +38,6 @@ class Card {
         cardDescription.appendChild(cardLikesCont);
         card.appendChild(cardDescription);
 
-        //card.querySelector('.place-card__like-icon').addEventListener('click', this.like);
-        //card.querySelector('.place-card__delete-icon').addEventListener('click', this.remove);
-
         return card;
     }
-
-    // Лайкает карточку
-    /*like(event) {
-        event.target.classList.toggle('place-card__like-icon_liked');
-
-        this.api.likeCard()
-        .then(res => {
-            if (res.ok) {
-                return res.json();
-            }
-            return Promise.reject(`Ошибка: ${res.status}`);
-        })
-        .then((result) => {
-            //  +/- 1
-        })
-        .catch((err) => {
-            console.log(err);
-        });
-
-    }*/
-
-    // Удаляет карточку
-    /*remove(event) {
-        document.querySelector('.places-list').removeChild(event.target.closest('.place-card'));
-    }*/
 }

@@ -1,5 +1,7 @@
+import Popup from "./Popup.js";
+
 // Класс попапа изменения аватара
-class PopupChangeAvatar extends Popup {
+export default class PopupChangeAvatar extends Popup {
 
     constructor(elem, avatarPhoto, validateForm, api) {
         super(elem);
@@ -25,7 +27,6 @@ class PopupChangeAvatar extends Popup {
                 return Promise.reject(`Ошибка: ${res.status}`);
             })
             .then((result) => {
-                console.log(result);
                 let avatar = result.avatar;
                 this.avatarPhoto.style.backgroundImage = "url('" + avatar + "')";
             

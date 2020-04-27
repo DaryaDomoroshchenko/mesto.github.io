@@ -1,5 +1,5 @@
 // Класс для работы с данными пользователя.
-class UserInfo {
+export default class UserInfo {
 
     constructor(profileName, profileJob, avatarPhoto, api) {
         this.profileName = profileName.querySelector('.user-info__name');
@@ -27,7 +27,6 @@ class UserInfo {
                 return Promise.reject(`Ошибка: ${res.status}`);
             })
             .then((result) => {
-                console.log(result);
                 this.myId = result._id;
                 const name = result.name;
                 const job = result.about;
@@ -39,10 +38,6 @@ class UserInfo {
 
                 this.setUserInfo({name, job});
 
-                //let myId = result._id;
-                //this.setMyId(myId);
-                //console.log(this.myId);
-
                 return result;
             })
             .then((result) => {
@@ -53,12 +48,6 @@ class UserInfo {
                 console.log(err);
             });
     }
-
-    // Обновляет id пользователя внутри экземпляра класса
-    /*setMyId(myId) {
-        this.myId = myId;
-        console.log(this.myId);
-    }*/
 
     // Возвращает id пользователя
     getMyId() {
