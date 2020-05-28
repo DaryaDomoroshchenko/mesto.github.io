@@ -1,18 +1,19 @@
 // Класс для хранения и отрисовки карточек
 export default class CardList {
 
-    constructor(container, createCard, userInfo, api) {
+    constructor(container, createCard, userInfo, api, preloader) {
         this.container = container;
         this.createCard = createCard;
         this.userInfo = userInfo;
         this.api = api;
+        this.preloader = preloader;
     }
 
     // Отрисовывает карточки при загрузке страницы
     render() {
         this.setDeleteHandler();
         this.setLikeHandler();
-        this.container.innerHTML = 'Загрузка...';
+        this.preloader.classList.remove('root__hide');
 
         this.api.getInitialCards()
             .then(res => {
@@ -43,6 +44,9 @@ export default class CardList {
             })
             .catch((err) => {
                 console.log(err);
+            })
+            .finally(() => {
+                this.preloader.classList.add('root__hide');
             });
     }
 

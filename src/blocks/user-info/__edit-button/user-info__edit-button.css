@@ -16,9 +16,15 @@
   background-color: #000;
 }
   
-@media screen and (max-width: 985px) {
+@media screen and (min-width: 769px) and (max-width: 985px) {
   .user-info__edit-button {
     margin: 24px auto 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .user-info__edit-button {
+    margin: 20px auto 0;
   }
 }
   

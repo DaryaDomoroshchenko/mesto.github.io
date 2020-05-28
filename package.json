@@ -2,7 +2,7 @@
   "name": "mesto_service",
   "description": "Сервис Mesto",
   "homepage": "https://daryadomoroshchenko.github.io/mesto_service/",
-  "version": "0.0.3",
+  "version": "0.0.8",
   "main": "index.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production rimraf dist && webpack --mode production",

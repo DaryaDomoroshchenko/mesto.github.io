@@ -3,3 +3,9 @@
   font-size: 20px;
   line-height: 25px;
 }
+
+@media screen and (max-width: 768px) {
+  .user-info__job {
+    margin: 10px 0 0 0;
+  }
+}

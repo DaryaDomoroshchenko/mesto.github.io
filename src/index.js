@@ -14,6 +14,7 @@ const placesList = document.querySelector('.places-list');
 const plusButton = document.querySelector('.user-info__plus-button');
 const editButton = document.querySelector('.user-info__edit-button');
 const avatarPhoto = document.querySelector('.user-info__photo');
+const preloader = document.querySelector('.preloader');
 
 /* Валидация */
 const validateForm = (formElem) => new FormValidator(formElem);
@@ -44,7 +45,7 @@ const showUserInfoFromServer = userInfo.updateUserInfo();
 const createCard = (placeName, link, likes) => new Card(placeName, link, likes);
 
 /* Добавляет массив карточек на страницу при загрузке */
-const cardList = new CardList(placesList, createCard, userInfo, api).render();
+const cardList = new CardList(placesList, createCard, userInfo, api, preloader).render();
 
 /* popupAddPlace */
 const popupAddPlace = new PopupAddPlace(
