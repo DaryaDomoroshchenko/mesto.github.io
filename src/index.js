@@ -22,11 +22,11 @@ const formAddValidate = new FormValidator(document.querySelector('#formAdd'));
 const formEditValidate = new FormValidator(document.querySelector('#formEdit'));
 const formChangeAvatarValidate = new FormValidator(document.querySelector('#formchangeAvatar'));
 
-const praktikumUrl = `${serverUrl}`;
+// const praktikumUrl = `${serverUrl}`;
 
 /* Подключение сайта к серверу */
 const api = new Api({
-    baseUrl: `${praktikumUrl}/cohort9`,
+    baseUrl: 'https://nomoreparties.co/cohort9',
     headers: {
       authorization: '59aa6e9d-8ab0-4424-8b7f-633e85efdefb',
       'Content-Type': 'application/json'
